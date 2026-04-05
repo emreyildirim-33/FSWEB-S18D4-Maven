@@ -31,6 +31,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(controllers = {BurgerController.class, GlobalExceptionHandler.class})
+@ExtendWith(ResultAnalyzer.class)
+@ExtendWith(ResultAnalyzer2.class)
 class ApplicationPropertiesAndControllerTest {
 
     @Autowired
